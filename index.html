@@ -16,6 +16,13 @@
   </head>
   <body fullbleed unresolved>
     <template is="auto-binding">
+
+      <core-pubnub publish_key="pub-c-857914ee-1604-4745-9a23-8c9564770c05" subscribe_key="sub-c-63e8b068-249a-11e4-801f-02ee2ddab7fe" uuid="{{uuid}}">
+        <core-pubnub-subscribe channel="polymer-chat" id="sub" messages="{{messages}}" on-callback="{{subscribeCallback}}"> 
+            <core-pubnub-publish channel="polymer-chat" id="pub" message=""></core-pubnub-publish>
+        </core-pubnub-subscribe>
+      </core-pubnub>
+
       <core-scaffold>
         <!-- Drawer panel -->
         <core-header-panel navigation flex>
