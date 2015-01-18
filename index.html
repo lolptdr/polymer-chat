@@ -15,23 +15,35 @@
     <link rel="import" href="bower_components/paper-fab/paper-fab.html"> 
   </head>
   <body fullbleed unresolved>
-    <core-scaffold>
-      <!-- Drawer panel -->
-      <core-header-panel navigation flex>
-        <core-toolbar class="tall">
-          <!-- avatar and username here -->
-        </core-toolbar>
-      </core-header-panel>
+    <template is="auto-binding">
+      <core-scaffold>
+        <!-- Drawer panel -->
+        <core-header-panel navigation flex>
+          <core-toolbar class="tall">
+            <!-- avatar and username here -->
+          </core-toolbar>
+          <core-item label="Built with:"></core-item>
+          <template repeat="{{item in items}}">
+          <core-item icon="{{item.icon}}" label="{{item.title}}"></core-item>
+        </template>
+        </core-header-panel>
 
-      <!-- App Title -->
-      <div tool layout horizontal flex>
-        <span flex>Kitteh Anonymous</span>
-        <core-icon icon="account-circle"></core-icon>
-        <span><!-- # ppl online --></span>
-      </div>
+        <!-- App Title -->
+        <div tool layout horizontal flex>
+          <span flex>Kitteh Anonymous</span>
+          <core-icon icon="account-circle"></core-icon>
+          <span><!-- # ppl online --></span>
+        </div>
 
-      <!-- Main content -->
-      <div flex>...</div>
-    </core-scaffold>
+        <!-- Main content -->
+        <div flex>...</div>
+
+        <div class="send-message" layout horizontal>
+          <paper-input flex label="Type message..." id="input" value="{{input}}" on-keyup="{{checkKey}}"></paper-input>
+          <paper-fab icon="send" id="sendButton" on-tap="{{sendMyMessage}}"></paper-fab> 
+        </div>
+      </core-scaffold>
+    </template>
+    <script type="text/javascript" src="js/application.js"></script>
   </body>
 </html>
