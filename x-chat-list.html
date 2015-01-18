@@ -1,0 +1,14 @@
+<polymer-element name="x-chat-list" attributes="avatar color username text">
+  <template>
+    <section class="user-list" layout horizontal>
+      <div class="avatar {{color}}" style="background-image: url({{avatar}})"></div>
+      <div flex>
+        <div class="username">{{username}}</div>
+        <div class="text">{{text}}</div>
+      </div>
+    </section>
+  </template>
+  <script> Polymer('x-chat-list', {
+  // set default values avatar: '', color: '', username: '', text: '' });
+  </script>
+</polymer-element>
