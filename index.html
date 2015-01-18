@@ -28,13 +28,17 @@
       <core-scaffold>
         <!-- Drawer panel -->
         <core-header-panel navigation flex>
-          <core-toolbar class="tall">
+          <core-toolbar id="navheader" class="tall">
             <!-- avatar and username here -->
+            <div class="middle avatar {{color}}" style="background-image: url({{avatar}})"></div>
+            <div class="bottom uuid">{{uuid}}</div>
           </core-toolbar>
-          <core-item label="Built with:"></core-item>
-          <template repeat="{{item in items}}">
-          <core-item icon="{{item.icon}}" label="{{item.title}}"></core-item>
-        </template>
+          <section layout verticle id="onlineLIst">
+            <core-item label="Built with:"></core-item>
+            <template repeat="{{item in items}}">
+              <core-item icon="{{item.icon}}" label="{{item.title}}"></core-item>
+            </template>
+          </section>
         </core-header-panel>
 
         <!-- App Title -->
