@@ -1,0 +1,21 @@
+{
+  "name": "polymer-chat",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lolptdr/polymer-chat",
+  "authors": [
+    "Joseph Tingsanchali <charnwoot@gmail.com>"
+  ],
+  "description": "polymer chat app with material design using Pubnub API",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2"
+  }
+}
